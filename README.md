@@ -1,13 +1,8 @@
-# Car-Dodging-Game
 # 🚗 Car Dodging Game
 
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" width="800" alt="Car Dodging Game Banner">
-</p>
+A fast-paced **2D Car Dodging Game** built using **C++** and the **SFML (Simple and Fast Multimedia Library)** framework.
 
-<p align="center">
-  <b>A fast-paced 2D arcade-style car dodging game built using C++ and SFML.</b>
-</p>
+The game challenges players to survive as long as possible by dodging incoming enemy vehicles while the game speed continuously increases.
 
 ---
 
@@ -15,51 +10,25 @@
 
 The objective of the game is simple:
 
-🚘 Control your car  
-⚡ Dodge incoming enemy vehicles  
-🏆 Survive as long as possible  
-🔥 Beat your highest score  
+- 🚘 Control your car
+- ⚡ Dodge enemy vehicles
+- 🏆 Score points by surviving longer
+- 🔥 Face increasing difficulty over time
 
-As the game progresses, the speed continuously increases, making the gameplay more challenging and exciting.
+The gameplay is smooth, responsive, and designed to provide an engaging arcade-style experience.
 
 ---
 
 # ✨ Features
 
 - 🚗 Smooth player movement
-- ⚡ Dynamic speed increase
+- ⚡ Increasing game speed and difficulty
 - 🎯 Real-time score tracking
-- 💥 Collision detection
+- 💥 Collision detection system
 - 🔊 Sound effects integration
-- ⏸ Pause and resume system
-- 🎨 Multiple enemy vehicle designs
-- 🛣 Lane-based arcade gameplay
-
----
-
-# 🖼 Screenshots
-
-## 🏁 Main Menu
-
-<p align="center">
-  <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/highway-1957063_1280.jpg" width="700">
-</p>
-
----
-
-## 🚘 Gameplay Screen
-
-<p align="center">
-  <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/auto-1868726_1280.jpg" width="700">
-</p>
-
----
-
-## 💥 Game Over Screen
-
-<p align="center">
-  <img src="https://cdn.pixabay.com/photo/2016/03/27/19/32/auto-1283963_1280.jpg" width="700">
-</p>
+- ⏸ Pause and resume functionality
+- 🎨 Multiple enemy car designs
+- 🛣 Lane-based movement system
 
 ---
 
@@ -67,15 +36,15 @@ As the game progresses, the speed continuously increases, making the gameplay mo
 
 | Technology | Purpose |
 |---|---|
-| **C++** | Core game logic |
-| **SFML** | Graphics, audio, rendering |
-| **OOP Concepts** | Modular game structure |
+| **C++** | Core game development |
+| **SFML** | Graphics, rendering, audio, and event handling |
+| **Object-Oriented Programming** | Modular game architecture |
 
 ---
 
-# 🧠 OOP Concepts Used
+# 🧠 OOP Concepts Implemented
 
-The project demonstrates:
+This project demonstrates important Object-Oriented Programming concepts such as:
 
 - Inheritance
 - Abstraction
@@ -86,8 +55,8 @@ The project demonstrates:
 
 ```text
 Car        → Base Class
-PlayerCar  → Player movement and controls
-EnemyCar   → Enemy vehicle behavior
+PlayerCar  → Handles player movement
+EnemyCar   → Controls enemy vehicle behavior
 Main/Game  → Game loop and rendering
 ```
 
@@ -95,19 +64,19 @@ Main/Game  → Game loop and rendering
 
 # 🎮 Controls
 
-| Key | Function |
+| Key | Action |
 |---|---|
 | ⬅ Left Arrow | Move Left |
 | ➡ Right Arrow | Move Right |
-| P | Pause Game |
+| P | Pause / Resume |
 | ENTER | Start / Restart |
 | ESC | Exit Game |
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Installation & Setup
 
-## 1️⃣ Clone Repository
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/car-dodging-game.git
@@ -118,7 +87,7 @@ cd car-dodging-game
 
 ## 2️⃣ Install SFML
 
-Download SFML from:
+Download and install SFML from:
 
 https://www.sfml-dev.org/
 
@@ -161,9 +130,9 @@ g++ main.cpp -o game -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 The game follows a continuous game loop:
 
-1. Process user input
-2. Spawn enemy vehicles
-3. Update movement
+1. Process player input
+2. Spawn enemy vehicles randomly
+3. Update object positions
 4. Detect collisions
 5. Update score and speed
 6. Render graphics on screen
@@ -175,9 +144,9 @@ The game follows a continuous game loop:
 - 🏆 Leaderboard system
 - 🎮 Multiplayer support
 - 🚦 Advanced difficulty levels
-- ✨ Better animations and effects
+- ✨ Better graphics and animations
 - 📱 Mobile compatibility
-- 🤖 AI-based enemy traffic
+- 🤖 AI-controlled enemy traffic
 
 ---
 
@@ -187,16 +156,16 @@ This project helped in understanding:
 
 - Real-time game development
 - Collision handling
-- Game loops
+- Frame-based animation
 - Event handling using SFML
-- Object-Oriented Programming
-- Frame-based animation systems
+- Game loop architecture
+- Practical implementation of OOP concepts
 
 ---
 
 # 🤝 Contribution
 
-Contributions are welcome!
+Contributions and improvements are welcome.
 
 ```bash
 Fork 🍴 → Improve ✨ → Pull Request 🚀
