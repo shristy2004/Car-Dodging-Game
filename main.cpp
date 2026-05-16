@@ -32,4 +32,7 @@ Sprite roadSprite;
 Clock clock;
  float spawnTimer = 0;
  float speedMultiplier = 1.0f;
+bool gameOver = false;
+ bool paused = false;
+ bool gameStarted = false
 
