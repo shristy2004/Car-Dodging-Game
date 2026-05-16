@@ -17,3 +17,6 @@ int main() {
  yellow2.loadFromFile("Assets/YellowCar2.png");
  yellow3.loadFromFile("Assets/YellowCar3.png");
  roadTex.loadFromFile("Assets/road.png");
+Sprite roadSprite;
+ roadSprite.setTexture(roadTex);
+ roadSprite.setScale(
