@@ -43,4 +43,7 @@ Font font;
  float score = 0;
  Text scoreText, speedText, speedText2, gameOverText, pauseText;
  Text startText, diffText;
+scoreText.setFont(font);
+ scoreText.setCharacterSize(30);
+ scoreText.setPosition
 
