@@ -70,3 +70,8 @@ startText.setFont(font);
  startText.setCharacterSize(25);
  startText.setPosition(230, 250);
  startText.setString("Press ENTER to Start\n1: Easy 2: Medium 3: Hard");
+
+diffText.setFont(font);
+ diffText.setCharacterSize(20);
+11
+ diffText.setPosition(10
