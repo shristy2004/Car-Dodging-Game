@@ -53,3 +53,9 @@ speedText.setFont(font);
 speedText2.setFont(font);
  speedText2.setCharacterSize(20);
  speedText2.setPosition(550, 40);
+
+gameOverText.setFont(font);
+ gameOverText.setCharacterSize(40);
+ gameOverText.setFillColor(Color::Red);
+ gameOverText.setPosition(180, 250);
+ gameOverText.setString("GAME OVER\nPress ENTER to Restart");
