@@ -45,7 +45,11 @@ Font font;
  Text startText, diffText;
 scoreText.setFont(font);
  scoreText.setCharacterSize(30);
- scoreText.setPosition
+ scoreText.setPosition(10,10);
+  
 speedText.setFont(font);
  speedText.setCharacterSize(25);
  speedText.setPosition(550,40);
+speedText2.setFont(font);
+ speedText2.setCharacterSize(20);
+ speedText2.setPosition(550, 40);
