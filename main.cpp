@@ -20,3 +20,12 @@ int main() {
 Sprite roadSprite;
  roadSprite.setTexture(roadTex);
  roadSprite.setScale(
+800.0f / roadTex.getSize().x,
+ 600.0f / roadTex.getSize().y
+ );
+ std::vector<Texture*> enemyTextures = {
+ &red1, &red2, &yellow1, &yellow2, &yellow3
+ };
+ PlayerCar player(playerTex);
+ std::vector<EnemyCar> enemies;
+ std::vector<float> lanes = {150, 400, 650};
