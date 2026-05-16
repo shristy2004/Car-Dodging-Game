@@ -38,4 +38,9 @@ bool gameOver = false;
 int difficulty = 2;
  float spawnDelay = 1.0f;
  float speedGrowth = 0.05f;
+Font font;
+ font.loadFromFile("Assets/arial.ttf");
+ float score = 0;
+ Text scoreText, speedText, speedText2, gameOverText, pauseText;
+ Text startText, diffText;
 
