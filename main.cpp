@@ -79,3 +79,12 @@ diffText.setPosition(10, 50);
  buffer.loadFromFile("Assets/crash.wav");
  Sound sound;
  sound.setBuffer(buffer);
+
+while (window.isOpen()) {
+ float dt = clock.restart().asSeconds();
+ Event event;
+ while (window.pollEvent(event)) {
+ if (event.type == Event::Closed)
+ window.close();
+ if (event.type == Event::KeyPressed) {
+ if (event.key.code == Keyboard::Escape)
