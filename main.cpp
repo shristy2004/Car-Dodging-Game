@@ -98,3 +98,112 @@ while (window.isOpen()) {
  if (event.key.code == Keyboard::Enter && !gameStarted) {
  gameStarted = true;
  }
+
+ey.code == Keyboard::Enter && !gameStarted) {
+ gameStarted = true;
+ }
+
+ if (event.key.code == Keyboard::Enter && gameOver) {
+ enemies.clear();
+ score = 0;
+ spawnTimer = 0;
+ speedMultiplier = 1.0f;
+ gameOver = false;
+ paused = false;
+ gameStarted = false;
+ difficulty = 2;
+ player = PlayerCar(playerTex);
+ }
+ if (event.key.code == Keyboard::P && gameStarted && !gameOver)
+ paused = !paused;
+ if (gameStarted && !paused && !gameOver) {
+ if (event.key.code == Keyboard::Left)
+ player.moveLeft();
+ if (event.key.code == Keyboard::Right)
+ player.moveRight();
+ }
+ }
+ }
+ if (gameStarted && !paused && !gameOver) {
+ if (difficulty == 1) {
+ spawnDelay = 1.5f;
+ speedGrowth = 0.03f;
+ } else if (difficulty == 2) {
+ spawnDelay = 1.0f;
+
+ speedGrowth = 0.05f;
+ } else {
+ spawnDelay = 0.6f;
+ speedGrowth = 0.08f;
+ }
+ spawnTimer += dt;
+ score += dt * 10;
+ speedMultiplier += dt * speedGrowth;
+ if (spawnTimer > spawnDelay) {
+ int lane = rand() % 3;
+ int texIndex = rand() % enemyTextures.size();
+ enemies.push_back(
+ EnemyCar(*enemyTextures[texIndex], lanes[lane], lane)
+ );
+ spawnTimer = 0;
+ }
+ for (auto& e : enemies)
+ e.move(dt * speedMultiplier);
+ for (auto& e : enemies) {
+ if (player.getSprite().getGlobalBounds().intersects(
+ e.getSprite().getGlobalBounds())) {
+ sound.play();
+ gameOver = true;
+ break;
+ }
+ }
+
+ enemies.erase(
+ std::remove_if(enemies.begin(), enemies.end(),
+ [](EnemyCar& e) {
+ return e.getSprite().getPosition().y > 600;
+ }),
+ enemies.end()
+ );
+ }
+ scoreText.setString("Score: " + std::to_string((int)score));
+ speedText.setString("Current Speed: " + std::to_string((int)(speedMultiplier * 10)));
+ speedText2.setString("Real Speed: " + std::to_string(speedMultiplier));
+ std::string diffName =
+ (difficulty == 1 ? "Easy" :
+ (difficulty == 2 ? "Medium" : "Hard"));
+ diffText.setString("Mode: " + diffName);
+ window.clear();
+ window.draw(roadSprite);
+ if (!gameStarted) {
+ window.draw(startText);
+ window.draw(diffText);
+ }
+ else {
+ window.draw(player.getSprite());
+ for (auto& e : enemies)
+ window.draw(e.getSprite());
+15
+ window.draw(scoreText);
+ window.draw(speedText);
+ window.draw(speedText2);
+ window.draw(diffText);
+ if (paused)
+ window.draw(pauseText);
+ if (gameOver)
+ window.draw(gameOverText);
+ }
+ window.display();
+ }
+ return 0;
+}
+Main.cpp
+#include "Game.h"
+#include <ctime>
+int main()
+{
+ srand(static_cast<unsigned>(time(nullptr)));
+ Game game;
+ game.run();
+ return 0;
+}
