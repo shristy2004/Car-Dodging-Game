@@ -88,3 +88,13 @@ while (window.isOpen()) {
  window.close();
  if (event.type == Event::KeyPressed) {
  if (event.key.code == Keyboard::Escape)
+
+  window.close();
+ if (!gameStarted) {
+ if (event.key.code == Keyboard::Num1) difficulty = 1;
+ if (event.key.code == Keyboard::Num2) difficulty = 2;
+ if (event.key.code == Keyboard::Num3) difficulty = 3;
+ }
+ if (event.key.code == Keyboard::Enter && !gameStarted) {
+ gameStarted = true;
+ }
