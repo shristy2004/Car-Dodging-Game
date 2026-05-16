@@ -73,5 +73,9 @@ startText.setFont(font);
 
 diffText.setFont(font);
  diffText.setCharacterSize(20);
-11
- diffText.setPosition(10
+
+diffText.setPosition(10, 50);
+ SoundBuffer buffer;
+ buffer.loadFromFile("Assets/crash.wav");
+ Sound sound;
+ sound.setBuffer(buffer);
