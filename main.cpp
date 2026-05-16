@@ -35,4 +35,7 @@ Clock clock;
 bool gameOver = false;
  bool paused = false;
  bool gameStarted = false
+int difficulty = 2;
+ float spawnDelay = 1.0f;
+ float speedGrowth = 0.05f;
 
