@@ -29,3 +29,7 @@ Sprite roadSprite;
  PlayerCar player(playerTex);
  std::vector<EnemyCar> enemies;
  std::vector<float> lanes = {150, 400, 650};
+Clock clock;
+ float spawnTimer = 0;
+ float speedMultiplier = 1.0f;
+
