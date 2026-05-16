@@ -65,3 +65,8 @@ pauseText.setFont(font);
  pauseText.setFillColor(Color::Yellow);
  pauseText.setPosition(300, 250);
  pauseText.setString("PAUSED");
+
+startText.setFont(font);
+ startText.setCharacterSize(25);
+ startText.setPosition(230, 250);
+ startText.setString("Press ENTER to Start\n1: Easy 2: Medium 3: Hard");
