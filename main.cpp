@@ -46,4 +46,6 @@ Font font;
 scoreText.setFont(font);
  scoreText.setCharacterSize(30);
  scoreText.setPosition
-
+speedText.setFont(font);
+ speedText.setCharacterSize(25);
+ speedText.setP
