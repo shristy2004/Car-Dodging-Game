@@ -59,3 +59,9 @@ gameOverText.setFont(font);
  gameOverText.setFillColor(Color::Red);
  gameOverText.setPosition(180, 250);
  gameOverText.setString("GAME OVER\nPress ENTER to Restart");
+
+pauseText.setFont(font);
+ pauseText.setCharacterSize(40);
+ pauseText.setFillColor(Color::Yellow);
+ pauseText.setPosition(300, 250);
+ pauseText.setString("PAUSED");
