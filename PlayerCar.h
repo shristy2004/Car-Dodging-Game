@@ -17,4 +17,10 @@ sprite.setTexture(texture);
  currentLane = 1;
  y = 500;
  sprite.setPosition(lanes[currentLane], y);
+void moveLeft() {
+ if (currentLane > 0) {
+ currentLane--;
+ sprite.setPosition(lanes[currentLane], y);
+ }
+ }
  
