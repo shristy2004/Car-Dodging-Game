@@ -29,4 +29,8 @@ void moveRight() {
  sprite.setPosition(lanes[currentLane], y);
  }
  }
+void move(float dt) override {
+ }
+
+}
  
