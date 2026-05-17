@@ -23,4 +23,10 @@ void moveLeft() {
  sprite.setPosition(lanes[currentLane], y);
  }
  }
+void moveRight() {
+ if (currentLane < 2) {
+ currentLane++;
+ sprite.setPosition(lanes[currentLane], y);
+ }
+ }
  
